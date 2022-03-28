@@ -63,7 +63,6 @@ def init_app(app):
 
 def get_movies():
     db = get_db()
-    movies = []
     results = db.execute('''SELECT * from movies''').fetchall()
     formatted_results = []
     for record in results:
